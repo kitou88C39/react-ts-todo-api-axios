@@ -32,6 +32,14 @@ const UsHolidays = () => {
       {apiData && apiData.length > 0 && (
         <h2>Public Holidays {apiData[0].countryCode}</h2>
       )}
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Holiday Type</th>
+          </tr>
+        </thead>
+      </table>
     </HolidaysWrapper>
   );
 };
