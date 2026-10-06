@@ -1,11 +1,17 @@
 import React from "react";
+import { apilink } from "../api_links";
 
 const UsHolidays = () => {
 
   const [apiData, setApiData] = React.useState();
 
-  const fetchDataApi = () => {
+  // fetching the api data using async await
+    const fetchDataApi = async () => {
 
+    try {
+      const response = await fetch(apilink);
+      const data = await response.json();
+    }
   }
 
   return (
