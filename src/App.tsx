@@ -1,13 +1,13 @@
-
+import UsHolidays from "./components/UsHolidays"
 
 function App() {
 
   return (
-    <>
 
-      <div className="ticks"></div>
+    <div>
+      <UsHolidays />
+      </div>
 
-    </>
   )
 }
 
