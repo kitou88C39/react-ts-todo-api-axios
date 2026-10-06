@@ -1,10 +1,16 @@
 import React from "react";
 import { apilink } from "../api_links";
 import styled from "styled-components";
+
+interface apiProps{
+  name: string;
+  date: string;
+  countryCode: string;
+}
+
+
 const UsHolidays = () => {
   const [apiData, setApiData] = React.useState([]);
-  import styled from "styled-components";
-
 
   // fetching the api data using async await
   React.useEffect(() => {
@@ -23,6 +29,7 @@ const UsHolidays = () => {
   },[]);
   return (
     <HolidaysWrapper>
+{apiData}
 
 
 
