@@ -1,8 +1,9 @@
 import React from "react";
 import { apilink } from "../api_links";
-
+import styled from "styled-components";
 const UsHolidays = () => {
   const [apiData, setApiData] = React.useState([]);
+  import styled from "styled-components";
 
 
   // fetching the api data using async await
@@ -21,12 +22,16 @@ const UsHolidays = () => {
     fetchDataApi()
   },[]);
   return (
-    <div>
+    <HolidaysWrapper>
 
 
 
-    </div>
+    </HolidaysWrapper>
   )
 }
 
 export default UsHolidays;
+
+const HolidaysWrapper = styled.div`
+
+  `
