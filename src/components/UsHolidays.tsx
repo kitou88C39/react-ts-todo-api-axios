@@ -20,8 +20,6 @@ const UsHolidays = () => {
 
     fetchDataApi()
   },[]);
-
-
   return (
     <div>
 
@@ -31,4 +29,4 @@ const UsHolidays = () => {
   )
 }
 
-export default UsHolidays
+export default UsHolidays;
