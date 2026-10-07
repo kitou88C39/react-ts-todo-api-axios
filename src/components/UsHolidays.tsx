@@ -27,16 +27,16 @@ const UsHolidays = () => {
     // };
 
   // !fetching the api data using the axios
-  const fetchDataApi =() => {
-    axios.get(apilink)
-      .then((response) => {
-        const data = response.data;
-        setApiData(data)
-      })
-      .catch((error) => {
-        console.log("Something Went Wrong", error);
-      })
-  }
+  // const fetchDataApi =() => {
+  //   axios.get(apilink)
+  //     .then((response) => {
+  //       const fetchData = response.data;
+  //       setApiData(fetchData)
+  //     })
+  //     .catch((error) => {
+  //       console.log("Something Went Wrong", error);
+  //     })
+  // }
 
 //! function to change the date format
 function changeDateFormat(dateString: string | number | Date) {
