@@ -1,7 +1,7 @@
 import React from "react";
 import { apilink } from "../api_links";
 import styled from "styled-components";
-import axios from axios;
+import axios from "axios";
 interface apiProps{
   name: string;
   date: string;
@@ -29,9 +29,14 @@ const UsHolidays = () => {
   // !fetching the api data using the axios
   const fetchDataApi =() => {
     axios.get(apilink)
-    .then((response) => {
-    })
-  };
+      .then((response) => {
+        const data = response.data;
+        setApiData(data)
+      })
+      .catch((error) => {
+        console.log("Something Went Wrong", error);
+      })
+  }
 
 //! function to change the date format
 function changeDateFormat(dateString: string | number | Date) {
