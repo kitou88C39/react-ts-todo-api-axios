@@ -11,10 +11,12 @@ interface apiProps{
 const UsHolidays = () => {
   const [apiData, setApiData] = React.useState<apiProps[]>();
 
-  // fetching the api data using async await
   React.useEffect(() => {
-    const fetchDataApi = async () => {
+    fetchDataApi()
+  }, []);
 
+  // fetching the api data using async await
+    const fetchDataApi = async () => {
       try {
         const response = await fetch(apilink);
         const data = await response.json();
@@ -23,8 +25,6 @@ const UsHolidays = () => {
         console.log("Something Went Wrong Please Try Again", error);
       }
     };
-    fetchDataApi()
-  }, []);
 
 //! function to change the date format
 function changeDateFormat(dateString: string | number | Date) {
@@ -53,7 +53,7 @@ function changeDateFormat(dateString: string | number | Date) {
         <tbody>
           {apiData && apiData.map((info, index) => (
             <tr key={index}>
-              <td>{info.date}</td>
+              <td>{changeDateFormat(info.date)}</td>
               <td>{info.name}</td>
             </tr>
           ))}
