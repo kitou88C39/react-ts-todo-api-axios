@@ -58,6 +58,16 @@ export default UsHolidays;
 const HolidaysWrapper = styled.div`
   h1 {
       margin-top: 3rem;
+      text-align: center;
   }
 
-  `
+  table {
+      border-collapse: collapse;
+      margin: auto
+  }
+
+  th{
+      background-color: #f2f2f2;
+  }
+
+  `;
