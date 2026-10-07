@@ -42,12 +42,19 @@ const UsHolidays = () => {
   const fetchDataApi = () => {
     fetch(apilink)
       .then((response) => {
-      if (!response.ok) {
-        throw new Error("No Response From the server")
-      }
-      return response.json();
-    })
-  }
+        if (!response.ok) {
+          throw new Error("No Response From the server")
+        }
+        return response.json();
+      })
+      .then((fetchData) => {
+        setApiData(fetchData)
+      })
+      .catch((error) =>
+        console.error("No data found");
+      })
+  });
+  };
 
 //! function to change the date format
 function changeDateFormat(dateString: string | number | Date) {
