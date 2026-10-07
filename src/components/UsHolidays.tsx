@@ -38,6 +38,17 @@ const UsHolidays = () => {
   //     })
   // }
 
+  // !fetching the api data using the promises
+  const fetchDataApi = () => {
+    fetch(apilink)
+      .then((response) => {
+      if (!response.ok) {
+        throw new Error("No Response From the server")
+      }
+      return response.json();
+    })
+  }
+
 //! function to change the date format
 function changeDateFormat(dateString: string | number | Date) {
   const options = {
