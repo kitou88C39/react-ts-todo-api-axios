@@ -23,9 +23,17 @@ const UsHolidays = () => {
         console.log("Something Went Wrong Please Try Again", error);
       }
     };
-
     fetchDataApi()
   }, []);
+
+//! function to change the date format
+  function changeDateFormat(dateString: string | number | Date) {
+    const options = {
+      year: "numberic",
+      month: "short",
+      day: "numeric"
+    } as Intl.DateTimeFormatOptions;
+  }
   return (
     <HolidaysWrapper>
       {apiData && apiData.length > 0 && (
@@ -56,7 +64,7 @@ const UsHolidays = () => {
 export default UsHolidays;
 
 const HolidaysWrapper = styled.div`
-  font-size: 2rem;
+  font-size: 1.2rem;
   h1 {
       margin-top: 3rem;
       text-align: center;
@@ -72,7 +80,7 @@ const HolidaysWrapper = styled.div`
       padding: 8px;
   }
   td {
-      border: 1px solid red;
+      border: 1px solid #dddddd;
       text-align: center;
       padding: 8px;
   }
