@@ -8,9 +8,8 @@ interface apiProps{
   countryCode: string;
 }
 
-
 const UsHolidays = () => {
-  const [apiData, setApiData] = React.useState<apiProps>();
+  const [apiData, setApiData] = React.useState<apiProps[]>();
 
   // fetching the api data using async await
   React.useEffect(() => {
@@ -39,6 +38,14 @@ const UsHolidays = () => {
             <th>Holiday Type</th>
           </tr>
         </thead>
+
+        <tbody>
+          {apiData && apiData.map((items, index) => (
+            <tr key={index}>
+              <td>{isTemplateSpan.}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </HolidaysWrapper>
   );
