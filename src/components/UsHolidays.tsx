@@ -27,15 +27,11 @@ const UsHolidays = () => {
     // };
 
   // !fetching the api data using the axios
-    const fetchDataApi = async () => {
-      try {
-        const response = await fetch(apilink);
-        const data = await response.json();
-        setApiData(data);
-      } catch (error) {
-        console.log("Something Went Wrong Please Try Again", error);
-      }
-    };
+  const fetchDataApi =() => {
+    axios.get(apilink)
+    .then((response) => {
+    })
+  };
 
 //! function to change the date format
 function changeDateFormat(dateString: string | number | Date) {
