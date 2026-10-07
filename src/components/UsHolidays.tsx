@@ -56,18 +56,20 @@ const UsHolidays = () => {
 export default UsHolidays;
 
 const HolidaysWrapper = styled.div`
+  font-size: 2rem;
   h1 {
       margin-top: 3rem;
       text-align: center;
   }
-
   table {
       border-collapse: collapse;
       margin: auto
   }
-
-  th{
+  th {
       background-color: #f2f2f2;
+      border: 1px solid red;
+      padding: 8px;
+      width: 20%;
   }
 
   `;
