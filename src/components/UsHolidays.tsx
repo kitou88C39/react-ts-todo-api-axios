@@ -40,9 +40,10 @@ const UsHolidays = () => {
         </thead>
 
         <tbody>
-          {apiData && apiData.map((items, index) => (
+          {apiData && apiData.map((info, index) => (
             <tr key={index}>
-              <td>{isTemplateSpan.}</td>
+              <td>{info.date}</td>
+              <td>{info.name}</td>
             </tr>
           ))}
         </tbody>
