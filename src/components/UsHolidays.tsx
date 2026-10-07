@@ -29,8 +29,9 @@ const UsHolidays = () => {
   return (
     <HolidaysWrapper>
       {apiData && apiData.length > 0 && (
-        <h2>Public Holidays {apiData[0].countryCode}</h2>
+        <h1>Public Holidays {apiData[0].countryCode}</h1>
       )}
+
       <table>
         <thead>
           <tr>
@@ -55,5 +56,8 @@ const UsHolidays = () => {
 export default UsHolidays;
 
 const HolidaysWrapper = styled.div`
+  h1 {
+      margin-top: 3rem;
+  }
 
   `
