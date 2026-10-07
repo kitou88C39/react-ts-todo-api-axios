@@ -64,12 +64,16 @@ const HolidaysWrapper = styled.div`
   table {
       border-collapse: collapse;
       margin: auto
+      width: 100%;
   }
   th {
       background-color: #f2f2f2;
       border: 1px solid red;
       padding: 8px;
-      width: 20%;
   }
-
+  td {
+      border: 1px solid red;
+      text-align: center;
+      padding: 8px;
+  }
   `;
