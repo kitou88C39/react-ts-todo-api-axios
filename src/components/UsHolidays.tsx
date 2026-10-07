@@ -27,13 +27,15 @@ const UsHolidays = () => {
   }, []);
 
 //! function to change the date format
-  function changeDateFormat(dateString: string | number | Date) {
-    const options = {
-      year: "numberic",
-      month: "short",
-      day: "numeric"
-    } as Intl.DateTimeFormatOptions;
-  }
+function changeDateFormat(dateString: string | number | Date) {
+  const options = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  } as Intl.DateTimeFormatOptions;
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-UK", options);
+}
   return (
     <HolidaysWrapper>
       {apiData && apiData.length > 0 && (
